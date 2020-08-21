@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Simple Calculator</string>
+    <string name="default_value">0</string>
+    <string name="buttonDigit0">0</string>
+    <string name="buttonDigit1">1</string>
+    <string name="buttonDigit2">2</string>
+    <string name="buttonDigit3">3</string>
+    <string name="buttonDigit4">4</string>
+    <string name="buttonDigit5">5</string>
+    <string name="buttonDigit6">6</string>
+    <string name="buttonDigit7">7</string>
+    <string name="buttonDigit8">8</string>
+    <string name="buttonDigit9">9</string>
+    <string name="buttonOperatorPlus">+</string>
+    <string name="buttonOperatorMinus">-</string>
+    <string name="buttonOperatorMultiply">x</string>
+    <string name="buttonOperatorDivide">/</string>
+    <string name="buttonEquals">=</string>
+    <string name="buttonPeriod">.</string>
+    <string name="buttonSign">+/-</string>
+    <string name="buttonClear">C</string>
+    <string name="buttonDelete">DEL</string>
+    <string name="MenuAbout">About</string>
+    <string name="DialogTitle">About Simple Calculator</string>
+    <string name="DialogSource">Source: https://github.com/zq99</string>
+    <string name="DialogLicense">License: GPL</string>
+    <string name="DialogOk">OK</string>
+</resources>
