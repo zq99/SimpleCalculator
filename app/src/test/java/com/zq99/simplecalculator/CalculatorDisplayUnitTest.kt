@@ -84,4 +84,13 @@ class CalculatorDisplayUnitTest {
         display.addSign()
         assertEquals("8",display.getDisplayText())
     }
+
+    @Test
+    fun checkDivisionWithDecimalResults(){
+        val display = CalculatorDisplay()
+        display.addNumberToDisplay(1.0)
+        assertEquals("1",display.getDisplayText())
+        display.addNumberToDisplay(0.001)
+        assertEquals("0.001",display.getDisplayText())
+    }
 }

@@ -80,7 +80,12 @@ class CalculatorDisplay {
     }
 
     fun addNumberToDisplay(number : Double){
-        displayText = number.toString().replace(".0","")
+        val numText = number.toString()
+        if(numText.takeLast(2) == ".0"){
+            displayText = numText.substring(0,numText.length - 2)
+        }else{
+            displayText = numText
+        }
     }
 
     fun getDisplayText() : String {
