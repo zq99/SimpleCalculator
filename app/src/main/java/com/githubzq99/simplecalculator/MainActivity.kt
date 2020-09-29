@@ -37,30 +37,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         }
     }
 
-    private fun getCalculatorButtonType(id: Int?): CalculatorViewModel.BUTTONS? {
-        val map = hashMapOf(
-            binding.button1.id to CalculatorViewModel.BUTTONS.DIGIT_7,
-            binding.button2.id to CalculatorViewModel.BUTTONS.DIGIT_8,
-            binding.button3.id to CalculatorViewModel.BUTTONS.DIGIT_9,
-            binding.button4.id to CalculatorViewModel.BUTTONS.OPERATOR_DIVIDE,
-            binding.button5.id to CalculatorViewModel.BUTTONS.DIGIT_4,
-            binding.button6.id to CalculatorViewModel.BUTTONS.DIGIT_5,
-            binding.button7.id to CalculatorViewModel.BUTTONS.DIGIT_6,
-            binding.button8.id to CalculatorViewModel.BUTTONS.OPERATOR_MULTIPLY,
-            binding.button9.id to CalculatorViewModel.BUTTONS.DIGIT_1,
-            binding.button10.id to CalculatorViewModel.BUTTONS.DIGIT_2,
-            binding.button11.id to CalculatorViewModel.BUTTONS.DIGIT_3,
-            binding.button12.id to CalculatorViewModel.BUTTONS.OPERATOR_SUBTRACTION,
-            binding.button13.id to CalculatorViewModel.BUTTONS.SIGN,
-            binding.button14.id to CalculatorViewModel.BUTTONS.DIGIT_0,
-            binding.button15.id to CalculatorViewModel.BUTTONS.DECIMAL,
-            binding.button16.id to CalculatorViewModel.BUTTONS.OPERATOR_ADDITION,
-            binding.button17.id to CalculatorViewModel.BUTTONS.CLEAR,
-            binding.button18.id to CalculatorViewModel.BUTTONS.DELETE,
-            binding.button20.id to CalculatorViewModel.BUTTONS.OPERATOR_EQUALS
-        )
-        return map[id]
-    }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         val inflater: MenuInflater = menuInflater
@@ -105,5 +81,29 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         alert.show()
     }
 
+    private fun getCalculatorButtonType(id: Int?): CalculatorViewModel.BUTTONS? {
+        val map = hashMapOf(
+            binding.button1.id to CalculatorViewModel.BUTTONS.DIGIT_7,
+            binding.button2.id to CalculatorViewModel.BUTTONS.DIGIT_8,
+            binding.button3.id to CalculatorViewModel.BUTTONS.DIGIT_9,
+            binding.button4.id to CalculatorViewModel.BUTTONS.OPERATOR_DIVIDE,
+            binding.button5.id to CalculatorViewModel.BUTTONS.DIGIT_4,
+            binding.button6.id to CalculatorViewModel.BUTTONS.DIGIT_5,
+            binding.button7.id to CalculatorViewModel.BUTTONS.DIGIT_6,
+            binding.button8.id to CalculatorViewModel.BUTTONS.OPERATOR_MULTIPLY,
+            binding.button9.id to CalculatorViewModel.BUTTONS.DIGIT_1,
+            binding.button10.id to CalculatorViewModel.BUTTONS.DIGIT_2,
+            binding.button11.id to CalculatorViewModel.BUTTONS.DIGIT_3,
+            binding.button12.id to CalculatorViewModel.BUTTONS.OPERATOR_SUBTRACTION,
+            binding.button13.id to CalculatorViewModel.BUTTONS.SIGN,
+            binding.button14.id to CalculatorViewModel.BUTTONS.DIGIT_0,
+            binding.button15.id to CalculatorViewModel.BUTTONS.DECIMAL,
+            binding.button16.id to CalculatorViewModel.BUTTONS.OPERATOR_ADDITION,
+            binding.button17.id to CalculatorViewModel.BUTTONS.CLEAR,
+            binding.button18.id to CalculatorViewModel.BUTTONS.DELETE,
+            binding.button20.id to CalculatorViewModel.BUTTONS.OPERATOR_EQUALS
+        )
+        return map[id]
+    }
 
 }
