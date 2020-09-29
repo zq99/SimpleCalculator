@@ -99,10 +99,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         val alert2 = getString(R.string.DialogLicense)
         val msg = alert1 + "\n\n" + alert2 + "\n"
         alertDialog.setMessage(msg)
-        alertDialog.setPositiveButton(
-            getString(R.string.DialogOk)
-        ) { _, _ ->
-        }
+        alertDialog.setPositiveButton(getString(R.string.DialogOk)) { _, _ -> }
         val alert: AlertDialog = alertDialog.create()
         alert.setCanceledOnTouchOutside(false)
         alert.show()

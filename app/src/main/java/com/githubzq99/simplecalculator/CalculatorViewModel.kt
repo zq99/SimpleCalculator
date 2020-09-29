@@ -3,10 +3,12 @@ package com.githubzq99.simplecalculator
 import androidx.lifecycle.ViewModel
 
 class CalculatorViewModel : ViewModel() {
-    enum class BUTTONS{
-        DIGIT_0, DIGIT_1, DIGIT_2, DIGIT_3, DIGIT_4, DIGIT_5, DIGIT_6, DIGIT_7, DIGIT_8, DIGIT_9,
-        OPERATOR_DIVIDE, OPERATOR_MULTIPLY, OPERATOR_SUBTRACTION, OPERATOR_ADDITION, OPERATOR_EQUALS,
-        DELETE, CLEAR, DECIMAL, SIGN,NONE
+    enum class BUTTONS(val value: Int){
+        DIGIT_0(0), DIGIT_1(1), DIGIT_2(2), DIGIT_3(3), DIGIT_4(4),
+        DIGIT_5(5), DIGIT_6(6), DIGIT_7(7), DIGIT_8(8), DIGIT_9(9),
+        OPERATOR_DIVIDE(10), OPERATOR_MULTIPLY(11), OPERATOR_SUBTRACTION(12),
+        OPERATOR_ADDITION(13), OPERATOR_EQUALS(14),
+        DELETE(15), CLEAR(16), DECIMAL(17), SIGN(18),NONE(19)
     }
 
     private val operators = arrayOf(BUTTONS.OPERATOR_ADDITION,BUTTONS.OPERATOR_SUBTRACTION,
@@ -35,18 +37,8 @@ class CalculatorViewModel : ViewModel() {
     }
 
     private fun addDigitToDisplay(calculatorButton: BUTTONS?){
-        when (calculatorButton) {
-            BUTTONS.DIGIT_0 -> calculatorDisplay.addDigit(0)
-            BUTTONS.DIGIT_1 -> calculatorDisplay.addDigit(1)
-            BUTTONS.DIGIT_2 -> calculatorDisplay.addDigit(2)
-            BUTTONS.DIGIT_3 -> calculatorDisplay.addDigit(3)
-            BUTTONS.DIGIT_4 -> calculatorDisplay.addDigit(4)
-            BUTTONS.DIGIT_5 -> calculatorDisplay.addDigit(5)
-            BUTTONS.DIGIT_6 -> calculatorDisplay.addDigit(6)
-            BUTTONS.DIGIT_7 -> calculatorDisplay.addDigit(7)
-            BUTTONS.DIGIT_8 -> calculatorDisplay.addDigit(8)
-            BUTTONS.DIGIT_9 -> calculatorDisplay.addDigit(9)
-            else -> return
+        if (calculatorButton != null) {
+            calculatorDisplay.addDigit(calculatorButton.value)
         }
     }
 

@@ -81,10 +81,10 @@ class CalculatorDisplay {
 
     fun addNumberToDisplay(number : Double){
         val numText = number.toString()
-        if(numText.takeLast(2) == ".0"){
-            displayText = numText.substring(0,numText.length - 2)
+        displayText = if(numText.takeLast(2) == ".0"){
+            numText.substring(0,numText.length - 2)
         }else{
-            displayText = numText
+            numText
         }
     }
 
